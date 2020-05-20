@@ -22,7 +22,7 @@ values (40);
 insert into Cocktail(cocktail_name)
 values ('Margarita');
 insert into Cocktail(cocktail_name)
-values ('Ocean beach');
+values ('Ocean Beach');
 insert into Cocktail(cocktail_name)
 values ('Snow in winter');
 
