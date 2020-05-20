@@ -1,6 +1,3 @@
---ввод боб и маргарита
---затем удаление этой инфы из таблицы clientcocktail
---exception нет имени или коктейля
 SET SERVEROUTPUT ON
 begin
 DBMS_OUTPUT.enable;
