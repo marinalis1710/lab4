@@ -23,7 +23,7 @@ begin
     end if;
 exception
    WHEN my_exc THEN
-      dbms_output.put_line('ERROR there is no cocktail_name or client_name'); 
+
       message:='We did not find client or cocktail';
       return message;
 end;
