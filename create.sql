@@ -57,7 +57,7 @@ CREATE TABLE cocktailprice (
     cocktail_name  VARCHAR2(70) NOT NULL
 );
 
-ALTER TABLE cocktailprice ADD CONSTRAINT cocktailprice_pk PRIMARY KEY ( price,
+ALTER TABLE cocktailprice ADD CONSTRAINT cocktailprice_pk PRIMARY KEY ( 
                                                                         cocktail_name );
 
 CREATE TABLE location_of_bar (
