@@ -8,18 +8,11 @@ create or replace view party as
     from barmancocktail
     inner join barmanbar on barmanbar.barman_name=barmancocktail.barman_name
     inner join location_bar on location_bar.bar_name=barmanbar.bar_name;
-    
---робимо types    
-create type bars_type as object(
-    barman_name varchar2(50),
-    bar_name varchar(50)
-);
 
-create type bars_table is table of bars_type;
---якшо шо, то функція не закомпілюється, бо треба типи помістити в пакет. 
+--функція не закомпілюється, бо треба типи в пакеті  
 --Тому для перевірки функції загляніть у файл package.sql
 create or replace function BarmanInBar(bar_n varchar2, city_n varchar2)  
-return bars_table
+return bars_str_table_type
 PIPELINED
 is
 begin
