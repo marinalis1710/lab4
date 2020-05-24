@@ -1,18 +1,12 @@
---код для запуска процедуры
+--run for function
+select * from table(party_pkg.BarmanInBar('Happy Cake', 'Kyiv'));
+--run for procedure
 declare 
     message varchar(500);
 begin
-    DeleteFactBuying(clien_name=>'Bob', 
+    party_pkg.DeleteFactBuying
+    (clien_name=>'Bob', 
     cocktai_name=>'Margarita',
     message => message);
     DBMS_OUTPUT.PUT_LINE(message);
 end;
-
---код для запуска функции
-DECLARE
-
-BEGIN
-
-    DBMS_OUTPUT.put_line(DeleteFactBuyingF('Bob', 'Margarita'));
-
-END;
