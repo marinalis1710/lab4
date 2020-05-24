@@ -1,3 +1,8 @@
+SET SERVEROUTPUT ON
+begin
+DBMS_OUTPUT.enable;
+end;
+
 create or replace procedure DeleteFactBuying(
 clien_name in varchar2, 
 cocktai_name in varchar2, 
