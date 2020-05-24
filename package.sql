@@ -1,4 +1,4 @@
-
+--нове VIEW , якщо не скопілювали
 create or replace view party as 
     select barmancocktail.barman_name,
     barmancocktail.cocktail_name,
@@ -8,14 +8,6 @@ create or replace view party as
     inner join barmanbar on barmanbar.barman_name=barmancocktail.barman_name
     inner join location_bar on location_bar.bar_name=barmanbar.bar_name;
     
-    
-create type bars_type as object(
-    barman_name varchar2(50),
-    bar_name varchar(50)
-);
-
-create type bars_table is table of bars_type;
-
 create or replace package party_pkg is
     type bars_str_type is record (
     barman_name varchar2(50),
