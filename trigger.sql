@@ -7,7 +7,7 @@ begin
     select cocktail_name into coc from clientcocktail
      where clientcocktail.cocktail_name = :old.cocktail_name AND ROWNUM = 1;
     :new.price := :old.price;
-    dbms_output.put_line('this game is sold,so can not chage cost');
+    dbms_output.put_line('this cocktail is sold,so can not chage cost');
     EXCEPTION
      WHEN OTHERS THEN
       :new.price := :new.price;
